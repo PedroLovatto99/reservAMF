@@ -12,12 +12,10 @@ import java.util.List;
 @RequestMapping("/salas")
 public class SalaController {
 
-    private final SalaRepository salaRepository;
     private SalaService salaService;
 
-    public SalaController(SalaService salaService, SalaRepository salaRepository) {
+    public SalaController(SalaService salaService) {
         this.salaService = salaService;
-        this.salaRepository = salaRepository;
     }
 
     @GetMapping

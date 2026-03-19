@@ -12,7 +12,7 @@ public class SalaMapper {
        salaModel.setNome(salaRequest.nome());
        salaModel.setBloco(salaRequest.bloco());
        salaModel.setTipo(salaRequest.tipo());
-       salaModel.setAtiva(true);
+       salaModel.setAtiva(salaRequest.ativa());
 
        return salaModel;
 

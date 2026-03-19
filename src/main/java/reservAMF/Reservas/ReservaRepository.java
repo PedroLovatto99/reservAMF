@@ -1,4 +1,6 @@
 package reservAMF.Reservas;
 
-public interface ReservaRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ReservaRepository extends JpaRepository<ReservaModel, Long> {
 }
