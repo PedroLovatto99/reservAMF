@@ -1,5 +1,7 @@
 package reservAMF.Reservas;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import reservAMF.Salas.SalaMapper;
 import reservAMF.Salas.SalaModel;
@@ -25,12 +27,11 @@ public class ReservaService {
         this.reservaMapper = reservaMapper;
     }
 
-    public List<ReservaResponse> listarReservas() {
-           List<ReservaModel> reservas = reservaRepo.findAll();
-            return reservas.stream()
-                    .map(reservaMapper::toResponse)
-                    .collect(Collectors.toList());
+    public Page<ReservaResponse> listarReservas(Pageable paginacao) {
+        Page<ReservaModel> paginaReservas = reservaRepo.findAll(paginacao);
+            return paginaReservas.map(reservaMapper::toResponse);
     }
+
 
     public ReservaResponse criarReserva(ReservaRequest reservaRequest) {
 

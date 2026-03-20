@@ -1,10 +1,14 @@
 package reservAMF.Reservas;
 
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import reservAMF.Salas.SalaResponse;
 
 import java.util.List;
 
@@ -20,10 +24,11 @@ public class ReservaController {
 
 
     @GetMapping
-    public ResponseEntity<List<ReservaResponse>> listarReservas() {
-        List<ReservaResponse> reservas = reservaService.listarReservas();
+    public ResponseEntity<Page<ReservaResponse>> listarReservas(@PageableDefault(size = 10) Pageable paginacao) {
+        Page<ReservaResponse> reservas = reservaService.listarReservas(paginacao);
         return ResponseEntity.ok(reservas);
     }
+
 
     @PostMapping
     public ResponseEntity<ReservaResponse> criarReserva(@Valid @RequestBody ReservaRequest reservaRequest) {

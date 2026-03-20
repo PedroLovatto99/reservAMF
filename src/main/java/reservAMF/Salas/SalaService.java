@@ -1,5 +1,8 @@
 package reservAMF.Salas;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -18,11 +21,9 @@ public class SalaService {
         this.salaMapper = salaMapper;
     }
 
-    public List<SalaResponse> listarSalas() {
-        List<SalaModel> salas = salaRepo.findAll();
-        return salas.stream()
-                .map(salaMapper::toResponse)
-                .collect(Collectors.toList());
+    public Page<SalaResponse> listarSalas(Pageable paginacao) {
+        Page<SalaModel> paginaDeSalas = salaRepo.findAll(paginacao);
+        return paginaDeSalas.map(salaMapper::toResponse);
 
     }
 
