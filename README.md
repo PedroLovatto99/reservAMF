@@ -1,12 +1,4 @@
-# 🚀 ReservAMF API - Gestão de Reservas Acadêmicas
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=java" alt="Java 21">
-  <img src="https://img.shields.io/badge/Spring_Boot-3.x-green?style=for-the-badge&logo=springboot" alt="Spring Boot">
-  <img src="https://img.shields.io/badge/Docker-Enabled-blue?style=for-the-badge&logo=docker" alt="Docker">
-  <img src="https://img.shields.io/badge/PostgreSQL-Managed-blue?style=for-the-badge&logo=postgresql" alt="PostgreSQL">
-  <img src="https://img.shields.io/badge/Redis-Cache-red?style=for-the-badge&logo=redis" alt="Redis">
-</p>
+# ReservAMF API - Gestão de Reservas Acadêmicas
 
 ## 📝 Sobre o Projeto
 O **ReservAMF** é uma API RESTful completa desenvolvida para gerenciar a reserva de salas em ambiente acadêmico. O projeto foi inspirado na rotina da **AMF (Antonio Meneghetti Faculdade)**, permitindo que alunos e professores solicitem salas para reuniões, apresentações de TCC e eventos, com uma gestão centralizada para aprovações.
