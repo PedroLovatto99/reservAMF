@@ -56,15 +56,6 @@ Este comando irá compilar a aplicação (via Maven no container), subir o banco
 docker-compose up --build
 ```
 A API estará disponível em http://localhost:8080.
-
-**3. Suba os containers:**
-Este comando irá compilar a aplicação (via Maven no container), subir o banco PostgreSQL e o Redis:
-```bash
-DB_NAME=reserva_db
-DB_USERNAME=seu_usuario
-DB_PASSWORD=sua_senha
-TOKEN_PASSWORD=sua_chave_secreta_jwt
-```
 ---
 ## 📖 Documentação da API (Swagger)
 Visualize e teste todos os endpoints em tempo real acessando:
