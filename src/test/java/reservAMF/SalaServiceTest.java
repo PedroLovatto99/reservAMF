@@ -16,9 +16,6 @@ import reservAMF.DTO.Response.SalaResponse;
 import reservAMF.Models.SalaModel;
 import reservAMF.Repository.SalaRepository;
 import reservAMF.Service.SalaService;
-import static org.mockito.ArgumentMatchers.any;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
