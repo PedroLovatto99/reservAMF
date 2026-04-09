@@ -8,7 +8,7 @@ O **ReservAMF** é uma API RESTful completa desenvolvida para gerenciar a reserv
 ## ✨ Alguns pontos do projeto:
 * **Validações de Regra de Negócio:** Algoritmos para impedir choque de horários, garantindo a integridade das agendas (uma reserva não pode sobrepor outra na mesma sala).
 * **Segurança com JWT:** Implementação de autenticação stateless utilizando **Spring Security** e **JSON Web Tokens**.
-* **Otimização de Consultas:** Resolução do problema **N+1** através de `JOIN FETCH` em JPQL, reduzindo drasticamente as chamadas ao banco de dados.
+* **Otimização de Consultas:** Resolução do problema **N+1** através de EntityGraph, reduzindo drasticamente as chamadas ao banco de dados.
 * **Cache de Alta Performance:** Integração com **Redis** para cache de dados, diminuindo a latência em consultas frequentes.
 * **Imutabilidade com Records:** Uso de **Java Records** para a implementação de **DTOs (Data Transfer Objects)**.
 * **Arquitetura em Camadas:** Organização rigorosa entre Controller, Service, Repository e Model.
